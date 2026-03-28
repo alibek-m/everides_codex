@@ -1,0 +1,33 @@
+{
+  "name": "@everides/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsup src/server.ts --format esm",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "dev": "tsx watch src/server.ts",
+    "lint": "tsc --noEmit",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@everides/shared": "file:../shared",
+    "@fastify/cors": "^10.0.2",
+    "@fastify/sensible": "^6.0.3",
+    "@fastify/websocket": "^11.0.2",
+    "@prisma/client": "^6.5.0",
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.2",
+    "firebase-admin": "^13.2.0",
+    "nanoid": "^5.1.5",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.11",
+    "prisma": "^6.5.0",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "Eve Rides",
+    "slug": "eve-rides",
+    "scheme": "everides",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "plugins": [
+      "expo-router",
+      [
+        "expo-notifications",
+        {
+          "color": "#4D4AE8",
+          "enableBackgroundRemoteNotifications": true
+        }
+      ]
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.everides.mobile",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Eve Rides uses your location while you browse nearby rides and during active rentals.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Eve Rides requires always-on access during active rentals for live trip tracking and safety.",
+        "NSMotionUsageDescription": "Eve Rides uses motion activity to improve ride-time tracking reliability and battery efficiency during active rentals.",
+        "UIBackgroundModes": [
+          "location",
+          "fetch",
+          "remote-notification"
+        ]
+      }
+    },
+    "android": {
+      "package": "com.everides.mobile",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "ACTIVITY_RECOGNITION",
+        "POST_NOTIFICATIONS"
+      ]
+    },
+    "extra": {
+      "eas": {
+        "projectId": "replace-in-eas"
+      }
+    }
+  }
+}
